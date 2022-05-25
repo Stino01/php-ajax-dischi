@@ -12,7 +12,7 @@
 <body>
     <div id="app">
         <header>
-            <select name="genere" id="genere">
+            <select name="genere" id="genere" v-model="selectGenre" @change="search()">
                 <option value="">All</option>
                 <option :value="gen" v-for="(gen, index) in genres" :key="index">{{gen}}</option>
             </select>
