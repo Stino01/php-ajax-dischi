@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style/style.css">
+    <title>PHP Dischi</title>
+</head>
+<body>
+    <div id="app">
+        <header>
+            <select name="genere" id="genere">
+                <option value="">All</option>
+                <option value="genre"></option>
+            </select>
+        </header>
+        <main>
+            <div class="container">
+                <div class="box" v-for="item in dischi" :key="item.id">
+                    <div class="img-holder">
+                        <img :src="item.poster" :alt="item.title">
+                    </div>
+                    <h3>{{item.title}}</h3>
+                    <div class="sub">
+                        <p>{{item.author}}</p>
+                        <p>{{item.year}}</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
