@@ -14,7 +14,7 @@
         <header>
             <select name="genere" id="genere">
                 <option value="">All</option>
-                <option value="genre"></option>
+                <option :value="gen" v-for="(gen, index) in genres" :key="index">{{gen}}</option>
             </select>
         </header>
         <main>
